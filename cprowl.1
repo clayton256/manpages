@@ -1,0 +1,32 @@
+.TH CPROWL 1
+.SH NAME
+CPROWL \- command line prowl client
+.SH SYNOPSIS
+.B cprowl
+[OPTIONS]
+.SH DESCRIPTION
+.B cprowl
+cprowl is a command line utility to push notifications to the Prowl service
+.SH USAGE
+cot [-a apikey] [-n appname] [-e event] [-d description] [-p priority]
+.SH OPTIONS
+.IP "apikey"
+string : prowl api key
+Note: the -a option can be called more than once to provide more than one api key.
+.IP.B  "appname"
+string : application name (default: "cprowl")
+.IP "event"
+string : event name (default: "event")
+.IP "description"
+string : description (default: "")
+.IP  "priority"
+create a new blank document
+      -2 : very low
+      -1 : moderate
+       0 : normal (default)
+       1 : high
+       2 : emergency
+.SH EXIT STATUS
+The cprowl utility exits 0.
+.SH AUTHOR
+This manual page was written by Mark Clayton <clayton256@gmail.com>

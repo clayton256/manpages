@@ -1,0 +1,27 @@
+#! /bin/bash
+
+#ECHO=echo
+
+#        if [ -h $HOME/.$1 ]; then
+#echo "removing old file .$1"
+#            $ECHO mv $HOME/.$1 $HOME/.$1.`date`
+#        else
+#        fi
+
+install_file()
+{
+    if [  $HOME/.$1 ]; then
+            echo "A file .$1 already exists"
+            $ECHO rm $HOME/.$1
+            #return;
+    fi
+    $ECHO ln -s "`pwd`/$1" "$HOME/man/man1/$1"
+}
+
+install_file cot.1
+install_file cprowl.1
+#install_file template.1
+
+#. ~/.bashrc
+
+
