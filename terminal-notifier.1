@@ -1,0 +1,36 @@
+.TH terminal-notifier(1)
+.Sh NAME
+.B terminal-notifier
+- is a command-line tool to send macOS User Notifications
+.SH SYNOPSIS
+.RB {| OBJECT |}
+.RB [| OPTIONS |]
+.SH DESCRIPTION
+.B terminal-notifier
+Send User Notifications on macOS from the command-line. In order to use terminal-notifier, you have to call the binary inside the application bundle. If you'd like notifications to stay on the screen until dismissed, go to System Preferences -> Notifications -> terminal-notifier and change the style from Banners to Alerts. You cannot do this on a per-notification basis.
+.SH OBJECT
+[\fB\-message\fR \fImessage\fR]
+.SH OPTIONS
+[\fB\-title\fR \fITitle\fR]
+[\fB\-subtitle\fR \fISubtitle\fR]
+[\fB\-appIcon\fR \fIappIcon\fR]
+[\fB\-open\fR \fIopen\fR]
+[\fB\-activate\fR \fIactivate\fR]
+[\fB\-sound\fR \fIsound\fR]
+.SH EXIT STATUS
+.TP
+.B
+0
+Success
+.SH COPYRIGHT
+.PP
+Copyright 2025 mark-clayton.com. All rights reserved
+https://www.mark-clayton.com
+
+.SH CREDITS
+.PP
+This man page is created only for demonstration purpose by Deepak Prasad <admin@golinuxcloud.com>
+
+.SH
+.PP
+GoLinuxCloud test_script(1)
