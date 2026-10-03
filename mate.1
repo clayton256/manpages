@@ -1,0 +1,41 @@
+mate 2.13.3 (Oct 12 2021)
+Usage: mate [-wl<selection>t<filetype>m<name>rehv] [-u<identifier> | file ...]
+       mate [-c<mark>] -s<mark>:<value> -l<line> [-u<identifier> | file ...]
+       mate -c<mark> [-l<line>] [-u<identifier> | file ...]
+
+Options:
+ -w, --[no-]wait                 Wait for file to be closed by TextMate.
+ -l, --line <selection>          Setup <selection> after loading file.
+ -t, --type <filetype>           Treat file as having <filetype>.
+ -m, --name <name>               The display name shown in TextMate.
+ -r, --[no-]recent               Add file to Open Recent menu.
+ -u, --uuid <identifier>         Reference already open document with
+                                 <identifier>.
+ -e, --[no-]escapes              Set this to preserve ANSI escapes from stdin.
+ -s, --set-mark <mark>[:<value>] Set a mark with optional <value> (requires --line).
+ -c, --clear-mark <mark>         Clear a mark (clears all marks without --line).
+ -h, --help                      Show this information.
+ -v, --version                   Print version information.
+
+Files opened via mate are added to the recent menu unless
+the file starts with a period, --wait or --no-recent is
+specified, or the file is in the system’s temporary directory.
+
+By default mate will wait for files to be closed if the command name
+has a "_wait" suffix (e.g. via a symbolic link) or when used as a
+filter as in these examples:
+
+    ls *.tex|mate|sh    -w implied
+    mate -|cat -n       -w implied (read from stdin)
+
+The -l/--line option requires a selection in the following format:
+
+    selection    = <range> ('&' <range>)*
+    range        = <pos> | <normal_range> | <column_range>
+    pos          = <line> (':' <column>)? ('+' <offset>)?
+    normal_range = <pos> '-' <pos>
+    column_range = <pos> 'x' <pos>
+    line         = [1-9][0-9]*
+    column       = [1-9][0-9]*
+    offset       = [1-9][0-9]*
+
