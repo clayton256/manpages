@@ -1,0 +1,32 @@
+.TH TEMPLATE 1
+.SH NAME
+TEMPLATE \- A template for more manpages
+.SH SYNOPSIS
+.B template
+usage: rmate [arguments] [--] file-path  edit specified file
+   or: rmate [arguments] -          read text from stdin
+
+-H, --host HOST  Connect to HOST. Use 'auto' to detect the host from
+                 SSH. Defaults to localhost.
+-p, --port PORT  Port number to use for connection. Defaults to 52698.
+-w, --[no-]wait  Wait for file to be closed by TextMate.
+-l, --line LINE  Place caret on line number after loading file.
++N               Alias for --line, if N is a number (eg.: +5).
+-m, --name NAME  The display name shown in TextMate.
+-t, --type TYPE  Treat file as having specified type.
+-n, --new        Open in a new window (Sublime Text).
+-f, --force      Open even if file is not writable.
+-v, --verbose    Verbose logging messages.
+-h, --help       Display this usage information.
+    --version    Show version and exit.
+[\fB\-n\fR \fIBITS\fR]
+[\fB\-\-bits\fR \fIBITS\fR]
+.IR file ...
+.SH DESCRIPTION
+.B template
+A template for more manpages.
+.SH OPTIONS
+.TP
+.BR \-n ", " \-\-bits =\fIBITS\fR
+Set the number of bits to modify.
+Default is one bit.
